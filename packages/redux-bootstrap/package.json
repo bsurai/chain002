@@ -1,0 +1,119 @@
+{
+  "name": "@redux-bootstrap/bootstrap",
+  "version": "0.0.1",
+  "description": "Bootstrapping for Redux applications",
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "jest": "./node_modules/.bin/jest",
+    "test": "jest",
+    "test:debug": "npm test -- --runInBand",
+    "test:watch": "npm test -- --watch",
+    "prepublish": "npm run build",
+    "build": "npm run build:clean && npm run build:lib",
+    "build:clean": "rimraf lib dts es",
+    "build:lib": "webpack",
+    "build:lib:watch": "npm run build:lib -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remojansen/redux-bootstrap.git"
+  },
+  "keywords": [
+    "redux",
+    "react",
+    "bootstrap"
+  ],
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/../../node_modules/ts-jest/preprocessor.js"
+    },
+    "testResultsProcessor": "<rootDir>/../../node_modules/ts-jest/coverageprocessor.js",
+    "testEnvironment": "jsdom",
+    "testRegex": ".*\\.test\\.tsx?$",
+    "testURL": "http://example.com",
+    "moduleFileExtensions": [
+      "tsx",
+      "ts",
+      "js",
+      "json"
+    ]
+  },
+  "author": "Remo H. Jansen <remo.jansen@wolksoftware.com> (http://www.remojansen.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/remojansen/redux-bootstrap/issues"
+  },
+  "homepage": "https://github.com/remojansen/redux-bootstrap#readme",
+  "dependencies": {
+    "@redux-bootstrap/core": "^0.0.1"
+  },
+  "peerDependencies": {
+    "history": "^3.2.1",
+    "lodash": "^4.17.4",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.5.2",
+    "redux-logger": "^3.0.0",
+    "reselect": "^2.5.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "prop-types": "^15.4.2"
+  },
+  "devDependencies": {
+    "@types/history": "^3.2.0",
+    "@types/jest": "^19.2.2",
+    "@types/jquery": "^2.0.41",
+    "@types/jsdom": "^2.0.29",
+    "@types/material-ui": "^0.16.0",
+    "@types/node": "^7.0.12",
+    "@types/react": "^15.0.22",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-redux": "^4.4.38",
+    "@types/react-router": "^3.0.9",
+    "@types/react-router-redux": "^4.0.43",
+    "@types/redux-logger": "^3.0.0",
+    "apollo-client": "^1.0.0-rc.6",
+    "awesome-typescript-loader": "^3.1.2",
+    "browserify": "^14.0.0",
+    "cdm-webpack-node-externals": "^1.5.6",
+    "envify": "^4.0.0",
+    "html5-history-api": "^4.2.7",
+    "invariant": "^2.2.2",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.2",
+    "jquery": "^3.0.0",
+    "phantomjs-prebuilt": "^2.1.11",
+    "publish-please": "^2.1.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "redux-thunk": "^2.2.0",
+    "rimraf": "^2.6.1",
+    "run-sequence": "^1.2.1",
+    "source-map-loader": "^0.2.0",
+    "sourcemap-istanbul-instrumenter-loader": "^0.2.0",
+    "ts-jest": "^19.0.10",
+    "ts-loader": "^2.0.3",
+    "tsify": "^2.0.8",
+    "tslint-loader": "^3.4.3",
+    "tslint-react": "^2.5.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "warning": "^3.0.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "browserify": {
+    "transform": [
+      "envify"
+    ]
+  },
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=3.0.0"
+  }
+}
